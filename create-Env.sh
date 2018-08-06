@@ -7,7 +7,7 @@ do
 	echo "================================="
 	echo "creating www.gamutkart$i container..."
 	sleep 1
-	docker run --name www.gamutkart$i -d -it --rm jaisriram111/shankar  /bin/bash
+	docker run --name ford$i -d -it --rm jaisriram111/shankar  /bin/bash
 	echo "www.gamutkart$i container has been created!"
 	echo "================================="
 done
