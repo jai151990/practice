@@ -10,7 +10,7 @@ do
 	docker run --name ford$i -d -it --rm jaisriram111/shankar  /bin/bash
 	echo "www.gamutkart$i container has been created!"
 	echo "=============================y===="
-donei
+done
 docker inspect -f '{{.NetworkSettings.Networks.bridge.IPAddress}}' `docker ps -q` > ips.txt
 
 ################
