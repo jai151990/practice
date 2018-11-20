@@ -22,7 +22,7 @@ for j in `cat ip.txt`
       echo "deploye war file into $j "
       sleep 3
     #  sshpass -p "1234" scp target/sbibank.war siva@$i:/home/siva/soft/apache-tomcat-8.5.32/webapps
-       sshpass -p "1234" scp target/ola2.war siva@$j:/home/siva/soft/apache-tomcat-8.5.32/webapps
+       sshpass -p "1234" scp target/sbibank.war siva@$j:/home/siva/soft/apache-tomcat-8.5.32/webapps
 
       echo "starting tomcat server $j"
       sshpass -p "1234" ssh siva@$j "JAVA_HOME=/home/siva/soft/jdk1.8.0_171" "/home/siva/soft/apache-tomcat-8.5.32/bin/./startup.sh"
