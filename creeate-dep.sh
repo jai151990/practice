@@ -16,7 +16,7 @@ docker inspect -f '{{.NetworkSettings.Networks.bridge.IPAddress}}' `docker ps -q
 ################
 echo "server ssh starting"
 docker attach ford$i
-service ssh start
+#service ssh start
 for j in `cat ip.txt`
     do
       ssh siva@j
