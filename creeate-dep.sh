@@ -9,13 +9,13 @@ do
 	sleep 1
 	docker run --name ford$i -d -it --rm jaisriram111/shankar  /bin/bash
 	echo "www.gamutkart$i container has been created!"
-	echo "================================="
-done
+	echo "=============================y===="
+donei
 docker inspect -f '{{.NetworkSettings.Networks.bridge.IPAddress}}' `docker ps -q` > ips.txt
 
 ################
 echo "server ssh starting"
-docker exec -i -t ford$i /bin/bash
+docker exec --tty -i ford$i bash
 #service ssh start
 for j in `cat ip.txt`
     do
